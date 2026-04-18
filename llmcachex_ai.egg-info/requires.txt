@@ -1,6 +1,0 @@
-redis
-numpy
-faiss-cpu
-sentence-transformers
-rank-bm25
-tiktoken
