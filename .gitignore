@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+# env files
+.env
+examples/.env
+
+# Mac
+.DS_Store
+
+# Index files
+faiss.index
+faiss.index.meta
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/

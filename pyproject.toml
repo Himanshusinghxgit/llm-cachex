@@ -1,0 +1,22 @@
+[project]
+name = "llm-cachex"
+version = "0.1.0"
+description = "Drop-in semantic + exact caching layer for LLM applications"
+authors = [
+  { name="Himanshu Singh" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+  "redis",
+  "numpy",
+  "faiss-cpu",
+  "sentence-transformers",
+  "rank-bm25",
+  "tiktoken",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
