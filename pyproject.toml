@@ -1,6 +1,6 @@
 [project]
 name = "llmcachex-ai"
-version = "0.1.0"
+version = "0.1.1"
 description = "Drop-in semantic + exact caching layer for LLM applications"
 authors = [
   { name="Himanshu Singh" }

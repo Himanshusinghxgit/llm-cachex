@@ -1,0 +1,27 @@
+# secrets
+exclude *.env
+exclude examples/.env
+
+# compiled / caches
+global-exclude __pycache__ *.pyc *.pyo
+
+# local artifacts
+exclude *.log
+exclude *.db
+exclude *.sqlite
+exclude *.sqlite3
+
+# vector index files
+exclude faiss.index
+exclude faiss.index.meta
+
+# OS junk
+exclude .DS_Store
+
+exclude *.env
+exclude examples/.env
+exclude *.db
+exclude *.sqlite
+exclude faiss.index
+exclude faiss.index.meta
+global-exclude __pycache__ *.pyc
