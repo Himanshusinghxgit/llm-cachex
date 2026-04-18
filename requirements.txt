@@ -2,3 +2,7 @@ sentence-transformers
 numpy
 redis
 faiss-cpu
+rank-bm25
+tiktoken
+torch
+scikit-learn

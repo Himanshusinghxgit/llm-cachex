@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: llm-cachex
-Version: 0.1.0
-Summary: Semantic + Redis caching for LLMs
-Author: Himanshu Singh
-Requires-Dist: redis
-Requires-Dist: faiss-cpu
-Requires-Dist: numpy
-Requires-Dist: sentence-transformers

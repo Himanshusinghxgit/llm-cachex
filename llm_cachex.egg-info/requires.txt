@@ -1,4 +1,0 @@
-redis
-faiss-cpu
-numpy
-sentence-transformers

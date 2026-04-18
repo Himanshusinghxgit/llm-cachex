@@ -1,42 +1,49 @@
-# 🚀 llm-cachex
+# 🚀 llmcachex-ai
 
-**Drop-in caching + retrieval layer for LLM applications (RAG, agents, chatbots).**
+**Drop-in caching + retrieval layer for LLM applications (RAG, agents, chatbots)**
 
-Stop paying for repeated LLM calls.
-Automatically reuse responses using **exact + semantic caching** with zero changes to your business logic.
+Stop paying for repeated LLM calls. Automatically reuse responses using **exact + semantic caching** with zero changes to your business logic.
 
 ---
 
-## ✨ Why llm-cachex?
+## ⚡ Installation
 
-Most LLM apps repeatedly call the model for:
+```bash
+pip install llmcachex-ai
+```
+
+---
+
+## ✨ Why llmcachex-ai?
+
+Most LLM applications repeatedly call the model for:
 
 * Slightly rephrased questions
 * Agent/tool loops
 * Chat history variations
 
-👉 This wastes **latency + money**
+👉 This leads to **higher latency + unnecessary cost**
 
-**llm-cachex fixes that automatically.**
+**llmcachex-ai solves this automatically** by caching intelligently.
 
 ---
 
 ## 🔥 Features
 
-* ⚡ **Exact cache** (Redis-backed)
-* 🧠 **Semantic cache** (FAISS + embeddings)
-* 🔍 **Hybrid retrieval** (BM25 + vector search)
-* 🧬 **Cross-encoder reranking** (high-quality matches)
-* 🤖 **Agent + tool support**
-* 🧵 **Memory-aware context support**
-* 💰 **Token + cost tracking**
-* 🧩 **Plug-and-play decorator API**
+* ⚡ Exact cache (Redis-backed)
+* 🧠 Semantic cache (FAISS + embeddings)
+* 🔍 Hybrid retrieval (BM25 + vector search)
+* 🧬 Cross-encoder reranking
+* 🤖 Agent + tool compatible
+* 🧵 Memory-aware context support
+* 💰 Token + cost tracking
+* 🧩 Plug-and-play decorator API
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ How It Works
 
-```text
+```
 User Query
    ↓
 llm_cache decorator
@@ -50,27 +57,17 @@ llm_cache decorator
 
 ---
 
-## 📦 Installation
-
-```bash
-pip install -e .
-```
-
-(For now, install locally. PyPI support coming soon.)
-
----
-
 ## 🚀 Quick Start
 
 ```python
-from llm_cachex import llm_cache, CacheConfig
+from llmcachex_ai import llm_cache, CacheConfig
 
 @llm_cache(CacheConfig())
 def ask_llm(prompt):
     return llm(prompt)
 
-print(ask_llm("What is AI?"))        # LLM call
-print(ask_llm("Explain AI"))         # Semantic cache hit
+print(ask_llm("What is AI?"))      # LLM call
+print(ask_llm("Explain AI"))       # Semantic cache hit
 ```
 
 ---
@@ -94,16 +91,17 @@ def agent(raw_query, full_prompt):
 
 ---
 
-## 🧠 Semantic Cache (What makes this powerful)
+## 🧠 Semantic Cache (Why it’s powerful)
 
-Unlike basic caching, this system:
+Unlike basic caching:
 
-```text
+```
 "What is AI?"
 "Explain artificial intelligence"
 ```
 
-👉 returns cached answer (no LLM call)
+👉 Both return the **same cached response**
+👉 No LLM call needed
 
 ---
 
@@ -126,42 +124,29 @@ CacheConfig(
 ## 📊 Metrics
 
 ```python
-from llm_cachex import metrics
+from llmcachex_ai import metrics
 
 print(metrics.summary())
 ```
 
-Example:
+Example output:
 
-```text
+```python
 {
-  'hits': 2,
-  'misses': 1,
-  'hit_rate': 66.67,
-  'avg_llm_latency_ms': 2000,
-  'avg_cache_latency_ms': 30,
-  'total_cost_rupees': 0.01
+  "hits": 2,
+  "misses": 1,
+  "hit_rate": 66.67,
+  "avg_llm_latency_ms": 2000,
+  "avg_cache_latency_ms": 30,
+  "total_cost_rupees": 0.01
 }
-```
-
----
-
-## 🧪 Examples
-
-Run demos:
-
-```bash
-python examples/basic.py
-python examples/rag_demo.py
-python examples/agent_demo.py
-python examples/strict_test.py
 ```
 
 ---
 
 ## 📁 Project Structure
 
-```text
+```
 llm_cachex/
 ├── api/            # decorator layer
 ├── core/           # cache, metrics, memory
@@ -187,7 +172,7 @@ llm_cachex/
 
 ## 🤝 Contributing
 
-PRs welcome. Open an issue for discussions.
+PRs welcome. Open an issue to discuss ideas.
 
 ---
 
@@ -205,4 +190,4 @@ Himanshu Singh
 
 ## ⭐ If this helps you
 
-Give a star. It helps the project grow.
+Give it a star ⭐ — it helps the project grow.
