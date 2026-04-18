@@ -1,3 +1,17 @@
+Metadata-Version: 2.4
+Name: llmcachex-ai
+Version: 0.1.1
+Summary: Drop-in semantic + exact caching layer for LLM applications
+Author: Himanshu Singh
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: redis
+Requires-Dist: numpy
+Requires-Dist: faiss-cpu
+Requires-Dist: sentence-transformers
+Requires-Dist: rank-bm25
+Requires-Dist: tiktoken
+
 # 🚀 llmcachex-ai
 
 pip install llmcachex-ai
@@ -62,7 +76,7 @@ llm_cache decorator
 ## 🚀 Quick Start
 
 ```python
-from llm_cachex import llm_cache, CacheConfig
+from llmcachex_ai import llm_cache, CacheConfig
 
 @llm_cache(CacheConfig())
 def ask_llm(prompt):
@@ -126,7 +140,7 @@ CacheConfig(
 ## 📊 Metrics
 
 ```python
-from llm_cachex import metrics
+from llmcachex_ai import metrics
 
 print(metrics.summary())
 ```
