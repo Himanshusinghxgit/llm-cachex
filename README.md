@@ -1,5 +1,7 @@
 # 🚀 llmcachex-ai
 
+pip install llmcachex-ai
+
 **Drop-in caching + retrieval layer for LLM applications (RAG, agents, chatbots)**
 
 Stop paying for repeated LLM calls. Automatically reuse responses using **exact + semantic caching** with zero changes to your business logic.
